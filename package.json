@@ -48,8 +48,11 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "gsap": "^1.19.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-gsap-enhancer": "^0.3.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -78,9 +81,15 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "transform-decorators-legacy"
     ]
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "globals": {
+      "TweenLite": true
+    }
   }
 }
